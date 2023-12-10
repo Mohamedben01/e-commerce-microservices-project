@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    url: jdbc:mysql://${DB_SERVER:localhost}:${DB_PORT:3306}/${MYSQL_DB:mydb}
+    username: ${MYSQL_USER:EMC2_DBA}
+    password: ${MYSQL_PASSWORD:EMC2_DBA}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true

@@ -1,0 +1,23 @@
+
+server:
+  port: 8888
+spring:
+  cloud:
+      gateway:
+        discovery:
+          locator:
+            enabled: true
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+springdoc:
+  swagger-ui:
+    urls:
+      - name: customer
+        url: /v3/api-docs/customers
+      - name: inventory
+        url: /v3/api-docs/inventories
+      - name: bill
+        url: /v3/api-docs/bills
